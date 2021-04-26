@@ -75,11 +75,11 @@ if __name__ == '__main__':
             even_offset %= len(even_subject_list)
             print(
                 f'SEAT-ID:{key} --- ROLL NO:{roll_no[subject.index(even_subject_list[even_offset])]} --- BRANCH:{even_subject_list[even_offset]}')
-            roll_no[subject.index(subject[g1.allocation_list[key] + even_offset])] += 1
+            roll_no[subject.index(even_subject_list[even_offset])] += 1
             even_offset += 1
         elif g1.allocation_list[key] == 1:
             odd_offset %= len(odd_subject_list)
             print(
                 f'SEAT-ID:{key} --- ROLL NO:{roll_no[subject.index(odd_subject_list[odd_offset])]}--- BRANCH:{odd_subject_list[odd_offset]}')
-            roll_no[subject.index(subject[g1.allocation_list[key] + odd_offset])] += 1
+            roll_no[subject.index(odd_subject_list[odd_offset])] += 1
             odd_offset += 1
